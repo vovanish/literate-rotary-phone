@@ -100,10 +100,23 @@
 				Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
 			</p>
 			<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-				<input type="text" name="date" value="" placeholder="27.10.2019">
-				<input type="text" name="time" value="" placeholder="10:00">
-				<input type="text" name="name" value="" placeholder="Борода">
-				<input type="tel" name="phone" value="" placeholder="+7 (812) 666 77 88">
+				<p class="appointment-item">
+					<label for="appointment-date">Дата</label>
+					<input id="appointment-date" type="text" name="date" value="" placeholder="27.10.2019">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-time">Время</label>	
+					<input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-name">Ваше</label>
+					<input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-phone">Телефон</label>
+					<input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 (812) 666 77 88">
+				</p>
+				<button class="button" type="submit">Отправить</button>
 			</form>
 		</section>
 	</main>
@@ -111,7 +124,7 @@
 	<footer class="main-footer">
 		<p class="footer-contacts">
 			Барбершоп "Бородинский <br>
-			Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/18 <br>
+			Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
 			<a href="map.html">Как нас найти?</a> <br>
 			Телефон: +7 (812) 666 77 88"
 		</p>
@@ -138,13 +151,33 @@
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
 		<p>Введите свой логин и пароль.</p>
-		<!-- Здесь будет форма -->
-		<span class="modal-close">x</span>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<label for="user-login" class="visually-hidden">Логин</label>
+				<input id="user-login" type="text" class="login-icon-user" name="login" placeholder="Логин">
+			</p>
+			<p>
+				<label for="user-password" class="visually-hidden">Пароль</label>
+				<input id="user-password" type="password" class="login-icon-password" name="password" placeholder="пароль">
+			</p>
+			<p class="login-password-info">
+				<label for="login-password-info">Запомните меня
+					<input id="login-password-info" type="checkbox" name="remember" class="visually-hidden">	
+					<span class="checkbox-indicator"></span>
+				</label>
+				<a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="button" type="submit">Войти</button>
+		</form>
+		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
 	<section class="modal_modal-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<span class="modal-close">x</span>
+		<p>
+			<img src="img/map.jpg" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="780" height="560">
+		</p>
+		<button class="modal-close" type="button">Закрыть</button>
 		<!-- Здесь будет карта -->
 	</section>
 </body>
